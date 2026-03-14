@@ -29,3 +29,9 @@ export {
   parseTourGenerationResponse,
   generateHeuristicTour,
 } from "./analyzer/tour-generator.js";
+export {
+  buildLanguageLessonPrompt,
+  parseLanguageLessonResponse,
+  detectLanguageConcepts,
+  type LanguageLessonResult,
+} from "./analyzer/language-lesson.js";
