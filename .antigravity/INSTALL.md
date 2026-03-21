@@ -13,14 +13,14 @@
 
 2. **Create the skills symlink:**
    ```bash
-   mkdir -p ~/.agents/skills
-   ln -s ~/.antigravity/understand-anything/understand-anything-plugin/skills ~/.agents/skills/understand-anything
+   mkdir -p ~/.gemini/antigravity/skills
+   ln -s ~/.antigravity/understand-anything/understand-anything-plugin/skills ~/.gemini/antigravity/skills/understand-anything
    ```
 
    **Windows (PowerShell):**
    ```powershell
-   New-Item -ItemType Directory -Force -Path "$env:USERPROFILE\.agents\skills"
-   cmd /c mklink /J "$env:USERPROFILE\.agents\skills\understand-anything" "$env:USERPROFILE\.antigravity\understand-anything\understand-anything-plugin\skills"
+   New-Item -ItemType Directory -Force -Path "$env:USERPROFILE\.gemini\antigravity\skills"
+   cmd /c mklink /J "$env:USERPROFILE\.gemini\antigravity\skills\understand-anything" "$env:USERPROFILE\.antigravity\understand-anything\understand-anything-plugin\skills"
    ```
 
 3. **Restart the chat or IDE** so Antigravity can discover the skills.
@@ -28,7 +28,7 @@
 ## Verify
 
 ```bash
-ls -la ~/.agents/skills/understand-anything
+ls -la ~/.gemini/antigravity/skills/understand-anything
 ```
 
 You should see a symlink pointing to the skills directory in the cloned repo.
@@ -51,6 +51,6 @@ Skills update instantly through the symlink.
 ## Uninstalling
 
 ```bash
-rm ~/.agents/skills/understand-anything
+rm ~/.gemini/antigravity/skills/understand-anything
 rm -rf ~/.antigravity/understand-anything
 ```
