@@ -255,19 +255,19 @@ Pass these parameters in the dispatch prompt:
 > Project: `<projectName>` — `<projectDescription>`
 > Languages: `<languages>`
 >
-> Nodes (summarized):
+> Nodes (file nodes only):
 > ```json
-> [list of {id, name, filePath, summary, type} for key nodes]
+> [list of {id, name, filePath, summary, type} for file-type nodes ONLY — do NOT include function or class nodes]
 > ```
 >
 > Layers:
 > ```json
-> [layers from Phase 4]
+> [list of {id, name, description} for each layer — omit nodeIds]
 > ```
 >
-> Key edges:
+> Edges (imports and calls only):
 > ```json
-> [imports and calls edges]
+> [list of edges where type is "imports" or "calls" only — exclude all other edge types]
 > ```
 
 After the subagent completes, read `$PROJECT_ROOT/.understand-anything/intermediate/tour.json` and normalize it into a final `tour` array. Apply these steps **in order**:
